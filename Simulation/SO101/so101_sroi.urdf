@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- SO101 with new gripper - TEST VERSION -->
-<robot name="so101_new_gripper_test">
+<!-- SO101 with SROI gripper and camera -->
+<robot name="so101_sroi">
 
   <!-- Materials -->
   <material name="3d_printed">
@@ -259,8 +259,8 @@
     </collision>
   </link>
 
-  <!-- Camera mount frame (ROS optical convention: Z-forward) -->
-  <link name="camera_mount_link">
+  <!-- Camera frame (ROS optical convention: Z-forward) -->
+  <link name="camera_link">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="1e-9"/>
@@ -268,11 +268,11 @@
     </inertial>
   </link>
 
-  <joint name="camera_mount_joint" type="fixed">
+  <joint name="camera_joint" type="fixed">
     <!-- Option F: X=Up, Y=Left, Z=Forward -->
     <origin xyz="0.046 0 -0.043" rpy="0 1.5708 0"/>
     <parent link="gripper_link"/>
-    <child link="camera_mount_link"/>
+    <child link="camera_link"/>
   </joint>
 
   <!-- ========== JOINTS ========== -->

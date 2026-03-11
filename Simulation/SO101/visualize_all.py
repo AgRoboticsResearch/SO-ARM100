@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Visualize SO101 robot with new gripper - ALL MESHES
+Visualize SO101 SROI robot with gripper and camera - ALL MESHES
 """
 
 import placo
@@ -9,10 +9,10 @@ import pinocchio
 from ischedule import schedule, run_loop
 from placo_utils.visualization import robot_viz, robot_frame_viz
 
-URDF_PATH = "/home/hls/SO-ARM100/Simulation/SO101/so101_new_gripper_test.urdf"
+URDF_PATH = "/home/hls/temp/SO-ARM100/Simulation/SO101/so101_sroi.urdf"
 
 print("=" * 50)
-print("SO101 with New Gripper - Full Visualization")
+print("SO101 SROI - Full Visualization")
 print("=" * 50)
 
 # Load robot
